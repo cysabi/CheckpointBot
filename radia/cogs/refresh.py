@@ -1,9 +1,8 @@
 """Refresh cog."""
 
-import discord
 from discord.ext import commands, tasks
 
-from radia import utils, google
+from radia import google
 
 
 class Refresh(commands.Cog, command_attrs={"hidden": True}):
@@ -16,7 +15,6 @@ class Refresh(commands.Cog, command_attrs={"hidden": True}):
     @staticmethod
     async def run_refresh():
         """Reload all the data on the worksheets and agenda."""
-        await utils.agenda.refresh()
         await google.connector.rules.refresh()
         await google.connector.whatis.refresh()
 
