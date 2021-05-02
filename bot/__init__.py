@@ -35,7 +35,7 @@ def initialize_sentry(sentry_env):
     from sentry_sdk.integrations.sqlalchemy import SqlalchemyIntegration
 
     sentry_sdk.init(
-        dsn="https://0070913733224711b3a9a3207b8ef7ab@o83253.ingest.sentry.io/5283135",
+        dsn="https://66590b4be75640e584c4c55e5fd65b6c@o83253.ingest.sentry.io/5376966",
         integrations=[
             SqlalchemyIntegration(),
             AioHttpIntegration()
