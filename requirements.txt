@@ -1,0 +1,13 @@
+# Bot
+discord
+asyncio
+sentry_sdk
+aiohttp
+
+# Database
+sqlalchemy
+psycopg2
+
+# Google
+gspread
+pandas

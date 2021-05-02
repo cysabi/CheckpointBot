@@ -1,0 +1,9 @@
+*
+
+!LICENSE
+!requirements.txt
+!radia
+!google.json
+
+**/__pycache__
+radia/db/data/
