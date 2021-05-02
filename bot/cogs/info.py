@@ -5,7 +5,7 @@ import random
 import discord
 from discord.ext import commands, tasks
 
-from radia import utils, google
+from bot import utils, google
 
 
 class Info(commands.Cog):

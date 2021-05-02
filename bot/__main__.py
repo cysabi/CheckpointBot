@@ -9,8 +9,8 @@ import logging
 
 from discord import Intents
 
-from radia import cogs, battlefy, google
-from radia.bot import Bot
+from bot import cogs, battlefy, google
+from bot.bot import Bot
 
 # Create Bot
 intents = Intents.default()
@@ -20,7 +20,7 @@ bot = Bot(command_prefix="!" if not os.getenv("DEBUG") else "^", intents=intents
 # Load Cogs
 for cog in cogs.names:
     try:
-        bot.load_extension("radia.cogs." + cog)
+        bot.load_extension("bot.cogs." + cog)
         logging.debug("Loaded cogs.%s", cog)
     except Exception as e:
         logging.warning("Failed to load cogs.%s", cog)

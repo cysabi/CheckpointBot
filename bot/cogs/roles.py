@@ -3,7 +3,7 @@
 import discord
 from discord.ext import commands, tasks
 
-from radia import utils
+from bot import utils
 
 
 class Roles(commands.Cog, command_attrs={"hidden": True}):

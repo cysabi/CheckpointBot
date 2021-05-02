@@ -7,7 +7,7 @@ import asyncio
 import discord
 from discord.ext import commands, tasks
 
-from radia import utils
+from bot import utils
 
 
 class Bot(commands.Bot):

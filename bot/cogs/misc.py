@@ -5,7 +5,7 @@ from random import randint
 import discord
 from discord.ext import commands
 
-from radia import utils
+from bot import utils
 
 
 class Misc(commands.Cog):

@@ -2,7 +2,7 @@
 
 from discord.ext import commands, tasks
 
-from radia import google
+from bot import google
 
 
 class Refresh(commands.Cog, command_attrs={"hidden": True}):
