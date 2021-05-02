@@ -1,8 +1,7 @@
 """List all the extensions."""
 
 names = [
-    "info",
-    "roles",
+    "tourney",
     "refresh",
     "misc",
 ]
