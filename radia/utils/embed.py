@@ -9,8 +9,8 @@ class Embed(discord.Embed):
     """A custom embed object."""
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, color=0xe2fe3d, **kwargs)
-        self.set_footer(text="Radia", icon_url="https://cdn.vlee.me.uk/LowInk/RadiaMemcakeMin.png")
+        super().__init__(*args, color=0xefd9b9, **kwargs)
+        self.set_footer(text="Checkpoint Bot", icon_url="https://cdn.vlee.me.uk/Checkpoint/checkpoint.png")
         self.timestamp = datetime.utcnow()
 
     @staticmethod
