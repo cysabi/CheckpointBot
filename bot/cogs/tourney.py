@@ -58,8 +58,14 @@ class Tourney(commands.Cog):
         """Send a random error message when the prefix doesn't exist."""
         return random.choice([
             f"WHAT IS {prefix.upper()}??",
-            "Doesn't exist",
-            ""
+            "doesn't exist",
+            "\*poof*",
+            "???",
+            "¯\_(ツ)_/¯",
+            "dark matter",
+            "a collection of subatomic particles",
+            "an empty void",
+            "probably mostly hydrogen",
         ])
 
 
