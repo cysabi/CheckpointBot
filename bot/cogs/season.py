@@ -74,7 +74,7 @@ class Season(commands.Cog):
             })
 
         await ctx.send(embed=utils.Embed(
-            title="Created new season roles!",
+            title="✅ Created new season roles!",
             description=utils.Embed.list([role.mention for role in rank_roles])
         ))
 
@@ -88,7 +88,7 @@ class Season(commands.Cog):
                 await role.delete(reason="Deleting old season roles")
 
         await ctx.send(embed=utils.Embed(
-            title="Deleted old season roles!",
+            title="🗑️ Deleted old season roles!",
             description=utils.Embed.list([role.name for role in rank_roles])
         ))
 
@@ -109,7 +109,7 @@ class Season(commands.Cog):
                     pruned += 1
 
         await ctx.send(embed=utils.Embed(
-            title="Pruned the Verified role members!",
+            title="✂️ Pruned the Verified role members!",
             description=f"Pruned Members: `{str(pruned)}`"
         ))
 
