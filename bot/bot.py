@@ -38,7 +38,7 @@ class Bot(commands.Bot):
             "!help to get started",
             "Signup for the Checkpoint In-House!",
             "Powered by Radia!",
-            "Sponsored by shellenforf institute",
+            "sponsored by shellenforf institute",
             "Twitter: @Checkpoint1SPL",
             # People-specific
             "Icon by @MochaSplats!",
