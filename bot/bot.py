@@ -23,8 +23,8 @@ class Bot(commands.Bot):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send(embed=utils.Embed(
-                title="Error: **Missing Required Argument**",
-                description=f"You can use `{ctx.prefix}help` for help."))
+                title=f"Error: **Missing Required Argument: '{error.param.name}'**",
+                description=f"You can use `{ctx.prefix}help {ctx.command.full_parent_name} {ctx.command.name}` for help."))
         elif isinstance(error, (commands.CommandNotFound, commands.MissingRole)):
             return
         else:
