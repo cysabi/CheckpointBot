@@ -9,7 +9,7 @@ import logging
 
 from discord import Intents
 
-from bot import cogs, battlefy, google
+from bot import cogs, google
 from bot.bot import Bot
 
 # Create Bot
