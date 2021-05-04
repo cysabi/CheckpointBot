@@ -17,7 +17,7 @@ class Season(commands.Cog):
         self.SeasonRole = namedtuple('SeasonRole', ['name', 'mention', 'delete'])
         self.rank_roles = {
             "Under S": 0x1AB46A,
-            "S Rank": 0x6A1EC1,
+            "S Rank": 0x0199B8,
             "Low S+": 0xCD2D7E,
             "High S+": 0xED580B,
             "Low X": 0xDB7821,
