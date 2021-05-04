@@ -1,5 +1,7 @@
 # Checkpoint Bot
-> The bot for [Checkpoint 1](https://discord.com/invite/ZybuvgP), derived from [Radia](https://github.com/IPLSplatoon/Radia)
+> The bot for [Checkpoint 1](https://discord.com/invite/ZybuvgP)
+
+This is a bot to help with tournament and verification season management for [Checkpoint 1](https://discord.com/invite/ZybuvgP). It is partially derived from my rewrite of [Radia](https://github.com/IPLSplatoon/Radia), however, there are still many custom-built cogs.
 
 ### Running locally
 #### Prerequisites
@@ -30,3 +32,11 @@
    Please know that there are no `true` or `false` values in `.env` files. If you want to set a key to false, set it to `0`
 
 1. Run `docker-compose up` in the repository root.
+
+---
+
+Contact me · [**@LeptoFlare**](https://github.com/LeptoFlare) · [lepto.tech](https://lepto.tech)
+
+As always, distributed under the MIT license. See `LICENSE` for more information.
+
+_[https://github.com/LeptoFlare/CheckpointBot](https://github.com/LeptoFlare/CheckpointBot)_
