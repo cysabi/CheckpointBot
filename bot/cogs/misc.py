@@ -23,7 +23,7 @@ class Misc(commands.Cog):
     @commands.command()
     async def pet(self, ctx, num: int = None):
         """Get a picture of a pet."""
-        embed = utils.Embed(title="Pets!", description="Picture of pets")
+        embed = utils.Embed(title="Pets!")
         embed.set_image(url=f"https://cdn.vlee.me.uk/TurnipBot/pets/{num if num else randint(0, 140)}.png")
         await ctx.send(embed=embed)
 
