@@ -14,7 +14,7 @@ class Refresh(commands.Cog, command_attrs={"hidden": True}):
 
     @staticmethod
     async def run_refresh():
-        """Reload all the data on the worksheets and agenda."""
+        """Reload all the data on the worksheets."""
         await google.connector.rules.refresh()
         await google.connector.whatis.refresh()
 
@@ -27,7 +27,7 @@ class Refresh(commands.Cog, command_attrs={"hidden": True}):
 
     @tasks.loop(hours=1)
     async def refresh_loop(self):
-        """Loop that refreshes worksheets and agenda."""
+        """Loop that refreshes worksheets."""
         await self.run_refresh()
 
 

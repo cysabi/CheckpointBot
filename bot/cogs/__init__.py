@@ -2,6 +2,7 @@
 
 names = [
     "tourney",
+    "season",
     "refresh",
     "misc",
 ]
