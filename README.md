@@ -6,16 +6,15 @@ This is a bot to help with tournament and verification season management for [Ch
 ## Usage
 This is for staff members, for non-staff members, type `!help`.
 
-### Managing seasons
+### Season cog
 Players are verified based on their ranks, and will recieve a rank role. Seasons are used to avoid outdated ranks, at the start of each new season, all of the rank roles are replaced.
 
-Additionally, a Verified role is used to handle channel permissions and channel access. This role is not replaced each season. However, it may be pruned every couple of seasons to prune inactive users without a rank role.
+Additionally, a Verified role is used to handle channel permissions and channel access. This role is not replaced each season. However, it may be pruned every couple of seasons.
 
 Here is how the verification process works.
 1. A user makes a role request in the respective channel, showing proof of their rank and asking for the correct role.
 2. A Barista verifies the user and gives them the `Verified` role and their respective rank role.
 
-#### Using commands
 The `!season` command group is used to manage season rank roles.
 
 - `!season` List the season roles. The command will also tell you the **index of each tournament**, this is important.
@@ -27,6 +26,12 @@ The `!season` command group is used to manage season rank roles.
   - `[delete=False]`: Additionally, you can specify to automatically call delete old season roles before creating new roles (`!season new spring true`).
 - `!season prune` Removes the Verified role from anyone without a season rank role.
   - This is helpful every couple of seasons when you want to remove the verified role from those who have neglected to request a role for a while.
+
+### Tourney cog
+- `!whatis` is used to quickly look up glossary terms, such as "swiss" and "glossary" (yes, the glossary includes a glossary). Requires the `google.json` file (see [#google-setup]).
+- `!rules` is used to send sections of the checkpoint tournament rules for easy reference. Requires the `google.json` file (see [#google-setup]).
+
+These commands are used like `!whatis battlefy`, if you omit the argument, the bot will automatically list all the possible options.
 
 ### Final words
 Thanks for reading, I hope this documentation section was helpful to you. If you have any questions, feel free to ask me [@LeptoFlare](https://github.com/LeptoFlare).
