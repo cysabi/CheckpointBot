@@ -93,6 +93,33 @@ class Season(commands.Cog):
         ))
 
     @commands.has_role("Baristas")
+    @commands.command()
+    async def verifications(self, ctx):
+        """Temporary command to verify members."""
+        number = 0
+        msg = await ctx.send(embed=await self.create_embed(number, "None"))
+        verified = await self.get_verified_role(ctx)
+        for member in ctx.guild.members:
+            if any(role.name.endswith("'21)") for role in member.roles):
+                await member.add_roles(verified)
+                number += 1
+                await msg.edit(embed=await self.create_embed(number, member.mention))
+        await msg.edit(embed=utils.Embed(
+            title="✅ Verified!",
+            description=f"Total Members: `{number}`",
+        ))
+
+    @staticmethod
+    async def create_embed(num, mention):
+        return utils.Embed(
+            title="⚙️ Verifying...",
+            description="\n".join([
+                f"Latest verified: {mention}",
+                f"Verified so far: `{num}`",
+            ])
+        )
+
+    @commands.has_role("Baristas")
     @season.command()
     async def prune(self, ctx):
         """Prune the Verified role members.
