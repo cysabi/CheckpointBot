@@ -3,6 +3,35 @@
 
 This is a bot to help with tournament and verification season management for [Checkpoint 1](https://discord.com/invite/ZybuvgP). It is partially derived from my rewrite of [Radia](https://github.com/IPLSplatoon/Radia), however, there are still many custom-built cogs.
 
+## Usage
+This is for staff members, for non-staff members, type `!help`.
+
+### Managing seasons
+Players are verified based on their ranks, and will recieve a rank role. Seasons are used to avoid outdated ranks, at the start of each new season, all of the rank roles are replaced.
+
+Additionally, a Verified role is used to handle channel permissions and channel access. This role is not replaced each season. However, it may be pruned every couple of seasons to prune inactive users without a rank role.
+
+Here is how the verification process works.
+1. A user makes a role request in the respective channel, showing proof of their rank and asking for the correct role.
+2. A Barista verifies the user and gives them the `Verified` role and their respective rank role.
+
+#### Using commands
+The `!season` command group is used to manage season rank roles.
+
+- `!season` List the season roles. The command will also tell you the **index of each tournament**, this is important.
+  - Alternatively, as an alias, you can use `!season roles` for the same result.
+- `!season delete` Removes the old season roles.
+  - If you are afraid it will delete the wrong roles, you can double-check what roles it will be deleting by doing `!season` or `!season list`.
+- `!season new <name> [delete=False]` Creates new season roles, you are required to specify the name of the season.
+  - `<name>`: Any name works, but if you specify a literal season (such as 'winter'), it will automatically convert it into an emoji.
+  - `[delete=False]`: Additionally, you can specify to automatically call delete old season roles before creating new roles (`!season new spring true`).
+- `!season prune` Removes the Verified role from anyone without a season rank role.
+  - This is helpful every couple of seasons when you want to remove the verified role from those who have neglected to request a role for a while.
+
+### Final words
+Thanks for reading, I hope this documentation section was helpful to you. If you have any questions, feel free to ask me [@LeptoFlare](https://github.com/LeptoFlare).
+
+## Contributing
 ### Running locally
 #### Prerequisites
 1. Make sure you have Docker installed.
