@@ -28,8 +28,8 @@ The `!season` command group is used to manage season rank roles.
   - This is helpful every couple of seasons when you want to remove the verified role from those who have neglected to request a role for a while.
 
 ### Tourney cog
-- `!whatis` is used to quickly look up glossary terms, such as "swiss" and "glossary" (yes, the glossary includes a glossary). Requires the `google.json` file (see [#google-setup]).
-- `!rules` is used to send sections of the checkpoint tournament rules for easy reference. Requires the `google.json` file (see [#google-setup]).
+- `!whatis` is used to quickly look up glossary terms, such as "swiss" and "glossary" (yes, the glossary includes a glossary). Requires the `google.json` file (see [Google Setup](#google-setup)).
+- `!rules` is used to send sections of the checkpoint tournament rules for easy reference. Requires the `google.json` file (see [Google Setup](#google-setup)).
 
 These commands are used like `!whatis battlefy`, if you omit the argument, the bot will automatically list all the possible options.
 
