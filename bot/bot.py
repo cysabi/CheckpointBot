@@ -36,6 +36,7 @@ class Bot(commands.Bot):
         """Loop to update the bot presence by selecting one of the strings at random."""
         await self.change_presence(activity=discord.Game(random.choice([
             "!help to get started",
+            "You're at Checkpoint 1!",
             "Signup for the Checkpoint In-House!",
             "Powered by Radia!",
             "sponsored by shellenforf institute",
