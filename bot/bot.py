@@ -41,7 +41,6 @@ class Bot(commands.Bot):
             "Powered by Radia!",
             "sponsored by shellenforf institute",
             "Twitter: @Checkpoint1SPL",
-            # People-specific
             "Icon by @MochaSplats!",
             "I kid you not Star, she turns herself into a sucklet",
             "Helpdesk needs you Mocha",
