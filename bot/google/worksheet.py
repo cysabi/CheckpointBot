@@ -42,5 +42,5 @@ class Responses(Worksheet):
         :return tuple: (Prefix, Response, Image)
         """
         for i, row in self.dataframe.iterrows():
-            if prefix in [p for p in row[:5] if p != '']:
+            if prefix in [p for p in row[1:6] if p != '']:
                 return row["prefix0"], row["Response"], row["ImageLink"]
