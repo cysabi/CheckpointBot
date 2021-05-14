@@ -20,8 +20,7 @@ class Connector:
         else:
 
             self.gsheet = self.service.open_by_key(os.getenv("GSHEET"))
-            self.rules = Responses(self.gsheet, "Rules")
-            self.whatis = Responses(self.gsheet, "Canned Responses")
+            self.whatis = Responses(self.gsheet, "Whatis")
 
         logging.debug("Loaded google.connector")
 

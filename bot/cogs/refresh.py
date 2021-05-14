@@ -15,7 +15,6 @@ class Refresh(commands.Cog, command_attrs={"hidden": True}):
     @staticmethod
     async def run_refresh():
         """Reload all the data on the worksheets."""
-        await google.connector.rules.refresh()
         await google.connector.whatis.refresh()
 
     @commands.command()

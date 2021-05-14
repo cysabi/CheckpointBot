@@ -14,26 +14,6 @@ class Tourney(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(aliases=["rule"])
-    async def rules(self, ctx, prefix=None, image: bool = False):
-        """Send an embedded rules section."""
-        if prefix:
-            try:
-                name, response, image_link = google.connector.rules.get(prefix.lower())
-                embed = utils.Embed(title=f"{name.capitalize()} Rules", description=response)
-                if image:
-                    embed.set_image(image_link)
-                await ctx.send(embed=embed)
-            except TypeError:
-                await ctx.send("Section could not be found, try a different prefix.")
-
-        else:
-            embed = utils.Embed(title="Rules")
-            embed.add_field(
-                name="Options:",
-                value=utils.Embed.list(google.connector.rules.options()))
-            await ctx.send(embed=embed)
-
     @commands.command(aliases=["canned"])
     async def whatis(self, ctx, prefix=None, image: bool = False):
         """Send a canned response."""
