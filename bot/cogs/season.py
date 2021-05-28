@@ -23,13 +23,13 @@ class Season(commands.Cog):
             "Low X": 0xDB7821,
         }
 
-    @commands.has_role("Baristas")
+    @commands.has_role("Barista")
     @commands.group(invoke_without_command=True, aliases=["verify", "verification"])
     async def season(self, ctx):
         """Command group for managing verification seasons."""
         await ctx.invoke(self.roles)
 
-    @commands.has_role("Baristas")
+    @commands.has_role("Barista")
     @season.command(aliases=["list", "view"])
     async def roles(self, ctx):
         """List all of the current verification season roles."""
@@ -40,7 +40,7 @@ class Season(commands.Cog):
             description=utils.Embed.list(role.mention for role in rank_roles)
         ))
 
-    @commands.has_role("Baristas")
+    @commands.has_role("Barista")
     @season.command(aliases=["start", "open", "create"])
     async def new(self, ctx, name: str, delete: bool = False):
         """Create new roles for a new season.
@@ -78,7 +78,7 @@ class Season(commands.Cog):
             description=utils.Embed.list([role.mention for role in rank_roles])
         ))
 
-    @commands.has_role("Baristas")
+    @commands.has_role("Barista")
     @season.command(aliases=["close", "delete"])
     async def end(self, ctx):
         """Delete the old season roles."""
@@ -92,34 +92,7 @@ class Season(commands.Cog):
             description=utils.Embed.list([role.name for role in rank_roles])
         ))
 
-    @commands.has_role("Baristas")
-    @commands.command()
-    async def verifications(self, ctx):
-        """Temporary command to verify members."""
-        number = 0
-        msg = await ctx.send(embed=await self.create_embed(number, "None"))
-        verified = await self.get_verified_role(ctx)
-        for member in ctx.guild.members:
-            if any(role.name.endswith("'21)") for role in member.roles):
-                await member.add_roles(verified)
-                number += 1
-                await msg.edit(embed=await self.create_embed(number, member.mention))
-        await msg.edit(embed=utils.Embed(
-            title="✅ Verified!",
-            description=f"Total Members: `{number}`",
-        ))
-
-    @staticmethod
-    async def create_embed(num, mention):
-        return utils.Embed(
-            title="⚙️ Verifying...",
-            description="\n".join([
-                f"Latest verified: {mention}",
-                f"Verified so far: `{num}`",
-            ])
-        )
-
-    @commands.has_role("Baristas")
+    @commands.has_role("Barista")
     @season.command()
     async def prune(self, ctx):
         """Prune the Verified role members.
