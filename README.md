@@ -3,10 +3,10 @@
 
 This is a bot to help with tournament and verification season management for [Checkpoint 1](https://discord.com/invite/ZybuvgP). It is partially derived from my rewrite of [Radia](https://github.com/IPLSplatoon/Radia), however, there are still many custom-built cogs.
 
-## Usage
+## usage
 This is for staff members, for non-staff members, type `!help`.
 
-### Season cog
+### season cog
 Players are verified based on their ranks, and will recieve a rank role. Seasons are used to avoid outdated ranks, at the start of each new season, all of the rank roles are replaced.
 
 Additionally, a Verified role is used to handle channel permissions and channel access. This role is not replaced each season. However, it may be pruned every couple of seasons.
@@ -27,21 +27,16 @@ The `!season` command group is used to manage season rank roles.
 - `!season prune` Removes the Verified role from anyone without a season rank role.
   - This is helpful every couple of seasons when you want to remove the verified role from those who have neglected to request a role for a while.
 
-### Tourney cog
+### tourney cog
 - `!whatis` is used to quickly look up glossary terms, and tournament rules, such as "dc", "swiss", and "glossary" (yes, the glossary includes a glossary). Requires the `google.json` file (see [Google Setup](#google-setup)).
 
 These commands are used like `!whatis battlefy`, if you omit the argument, the bot will automatically list all the possible options.
 
-### Final words
-Thanks for reading, I hope this documentation section was helpful to you. If you have any questions, feel free to ask me [@LeptoFlare](https://github.com/LeptoFlare).
-
-## Contributing
-### Running locally
-#### Prerequisites
+## local setup
 1. Make sure you have Docker installed.
 1. A Google API project for the bot.
 
-#### Google setup
+### Google setup
 1. Enable the following API
    - [Google Sheets API](https://console.developers.google.com/apis/api/sheets.googleapis.com)
    - [Google Drive API](https://console.developers.google.com/apis/api/drive.googleapis.com)
@@ -52,7 +47,7 @@ Thanks for reading, I hope this documentation section was helpful to you. If you
 1. Share the Google Sheet with the `client_email` from the json file.
 1. Copy the gsheet key from the url at `https://docs.google.com/spreadsheets/d/`**`{key}`**`/edit`, you will use this in the `.env`
 
-#### Bot Setup
+### bot setup
 1. Create a `.env` in the repository root:
 
    ```py
@@ -68,8 +63,4 @@ Thanks for reading, I hope this documentation section was helpful to you. If you
 
 ---
 
-Contact me · [**@LeptoFlare**](https://github.com/LeptoFlare) · [lepto.tech](https://lepto.tech)
-
-As always, distributed under the MIT license. See `LICENSE` for more information.
-
-_[https://github.com/LeptoFlare/CheckpointBot](https://github.com/LeptoFlare/CheckpointBot)_
+*empathy included • [**@cysabi**](https://github.com/cysabi) • [cysabi.github.io](https://cysabi.github.io)*
